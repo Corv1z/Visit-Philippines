@@ -5,6 +5,7 @@
 body{
     margin: 0;
     margin-bottom: 300px;
+    padding: 0;
 }
 
 .navbar{
@@ -38,7 +39,7 @@ body{
 }
 
 .header{
-    background-image: url(images/philippines-1-1621524923.profileImage.2x-jpg.webp);
+    background-image: url(images/cauayan-island-resort-X3IRiBqvSuY-unsplash.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -51,9 +52,8 @@ body{
     font-size: 60px;
     color: white;
     text-shadow: 0 0 8px black;
-    margin: 220px 0px 4px 0px;
+    margin: 290px 0px 4px 0px;
 }
-
 
 .btn-txt{
     box-shadow: 0 0 4px black;
@@ -110,7 +110,7 @@ h1{
     color: white;
     top: 0;
     left: 0;
-    width: 370px;
+    width: 460px;
     height: 220px;
     background-color: rgba(red, green, blue, 0.5);
     display: flex;
@@ -122,7 +122,7 @@ h1{
 
 .layout{
     cursor: pointer;
-    width: 370px;
+    width: 460px;
     height: 220PX;
     border-radius: 5px;
     object-fit: cover;
