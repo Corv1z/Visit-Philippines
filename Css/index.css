@@ -2,9 +2,14 @@
     font-family: arial;
 }
 
+
 body{
     margin: 0;
     margin-bottom: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
 }
 
 .navbar{
@@ -17,7 +22,6 @@ body{
     overflow: hidden;
     margin: 20px auto;
     padding: 0;
-
 }
 
 .navbar a{
@@ -39,8 +43,6 @@ body{
 
 .header{
     background-image: url(images/philippines-1-1621524923.profileImage.2x-jpg.webp);
-    background-position: center;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,6 +79,7 @@ h1{
     justify-content: space-around;
     margin-top: 40px;
 }
+
 
 .layoutbox{
     position: relative;
@@ -126,4 +129,23 @@ h1{
     height: 220PX;
     border-radius: 5px;
     object-fit: cover;
+}
+
+@media only screen and (min-width:500) {
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .navbar ul{
+        list-style-type:  none;
+        z-index: 1000;
+        top: 0;
+        position: fixed;
+        padding: 0;
+        margin: 20px auto;
+        width: 500px;
+    }
 }
