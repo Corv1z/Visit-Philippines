@@ -4,38 +4,109 @@
 
 body{
     margin: 0;
-    margin-bottom: 300px;
-    padding: 0;
-}
-
-.navbar{
-    width: 100%;
-    padding: 0;
-}
-
-.navbar ul{
-    list-style-type: none;
-    overflow: hidden;
-    margin: 20px auto;
-    padding: 0;
-
+    background-color: var(--primary-color);
 }
 
 .navbar a{
-    display: block;
-    text-align: center;
-    margin: 0px 40px;
-    text-decoration: none;
     color: white;
     text-shadow: 0 0 4px black;
+    margin: 30px;
+    text-decoration: none;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    position: absolute;
 }
 
-.navbar a:hover{
+.darkmode{
+    display: flex;
+    position: sticky;
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    right: 0;
+    justify-content: end;
+    align-items: end;
+}
+
+label{
+    width: 100px;
+    height: 37px;
+    position: relative;
+    display: block;
+    background:white;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
     cursor: pointer;
+    margin-right: 20px;
+    transition: 0.3s;
 }
 
-.navbar li{
-    float: left;
+label:after{
+    content: "";
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background: linear-gradient(180deg, #ffcc89,#d8860b);
+    border-radius: 200px;
+    box-shadow: 0px 0px 15px;
+    transition: 0.3s;
+}
+
+input{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked + label{
+    background: #242424;
+}
+
+input:checked + label:after{
+    left: 82px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #777,#3a3a3a);
+}
+
+
+:root{
+
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+    --gradient-color:linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)
+}
+
+.dark-theme{
+    --primary-color: #212121;
+    --secondary-color: #fff;
+    --gradient-color:Linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+}
+
+.stickyheader{
+    text-align: center;
+    padding: 7px;
+    display: inline-flex;
+    justify-content: end;
+    align-items: end;
+    margin-top: 50px;
+    font-size: 30px;
+    color: var(--secondary-color);
+    position: sticky;
+    text-shadow: 0 0 8px black;
+    top: 0;
+    border: 2px outset black;
+    border-radius: 0px 16px 16px 0px;
+    background-color: var(--gradient-color);
+    background-image: var(--gradient-color);
+}
+
+.imagebox1{
+    margin-top: 20px;
 }
 
 .header{
@@ -44,6 +115,7 @@ body{
     background-size: cover;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -52,7 +124,7 @@ body{
     font-size: 60px;
     color: white;
     text-shadow: 0 0 8px black;
-    margin: 300px 0px 4px 0px;
+    margin: 340px 0px 4px 0px;
 }
 
 .btn-txt{
@@ -70,6 +142,7 @@ body{
 h1{
     font-size: 25px;
     text-align: center;
+    color: var(--secondary-color);
 }
 
 .box{
@@ -89,6 +162,7 @@ h1{
 
 .layoutdescription{
     text-shadow: 0 0 4px black;
+    color: white;
     margin-top: 150px;
     font-weight: bold;
     padding-left: 10px;
@@ -108,7 +182,7 @@ h1{
 .layoutoverlay{
     cursor: pointer;
     position: absolute;
-    color: white;
+    color: var(--primary-color);
     top: 0;
     left: 0;
     width: 460px;
@@ -133,7 +207,7 @@ h1{
     align-items: center;
 }
 .landmark-imgs{
-    display: grid;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -145,62 +219,32 @@ h1{
 .imgs-4,
 .imgs-5,
 .imgs-6{
-    width: 810px;
+    display: block;
+    width: 650px;
     height: 390px;
     object-fit: cover;
     border-radius: 6px;
  
 }
 
-.image{
-    position: relative;
-}
-
-.img-1{
-    display: block;
-    width: 100%;
-}
-
-.imageoverlay{
-    position: absolute;
-    color: white;
-    top: 0;
-    left: 0;
-    width: 810px;
-    height: 390px;
-    background-color: rgba(0, 0, 0, 0.3);
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.30s;
-    border-radius: 6px;
+    width: 1400px
 }
 
-.imageoverlay > * {
-    transform: translateY(20px);
-    transition: transform 0.30s;
-}
-
-
-.imageoverlay:hover > * {
-    transform: translateY(0);
-}
-
-.imageoverlay:hover{
-    opacity: 1;
-}
-
-.imagetitle{
-    font-size: 2em;
-    font-weight: bold;
-}
 
 .imagedescription{
     font-size: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    text-shadow: 0 0 10px black;
+    color: var(--secondary-color);
 }
 
 
@@ -212,4 +256,119 @@ h1{
     display: flex;
     flex-direction: column;
     background-color: gray;
+}
+
+@media (max-width:1000px) {
+    .text1{
+        text-align: center;
+        position: sticky;
+        top: 0;
+        font-size: 75px;
+        color: white;
+        text-shadow: 0 0 8px black;
+        margin: 300px 0px 4px 0px;
+    }
+    .header{
+        background-image: url(images/cauayan-island-resort-X3IRiBqvSuY-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .layout{
+        cursor: pointer;
+        width: 320px;
+        height: 220PX;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+    .layoutoverlay{
+        cursor: pointer;
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+        width: 320px;
+        height: 220px;
+        background-color: rgba(red, green, blue, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        border-radius: 6px;
+    }
+    .navbar a{
+        color: white;
+        text-shadow: 0 0 4px black;
+        margin: 30px;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    .imgs-1,
+    .imgs-2,
+    .imgs-3,
+    .imgs-4,
+    .imgs-5,
+    .imgs-6{
+        width: 700px;
+        height: 390px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .img-1{
+        display: block;
+        width: 100%;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4,
+    .image5,
+    .image6{
+    display: flex;
+    flex-direction: column;
+    width: 700px
+}
+
+    .imagetitle{
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .imagedescription{
+        color: black;
+        font-size: 1.45em;
+        padding: 20px;
+    }
+    .stickyheader{
+        text-align: center;
+        padding: 7px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        font-size: 30px;
+        position: sticky;
+        top: 0;
+        border: 2px outset black;
+        border-radius: 0px 16px 16px 0px;
+        background-color: #85FFBD;
+        background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); 
+    }
 }
