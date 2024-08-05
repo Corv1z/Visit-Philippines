@@ -119,6 +119,8 @@ input:checked + label:after{
     box-shadow: 0 0 4px black;
     border: none;
     cursor: pointer;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
     border-radius: 20px;
     font-size: 15px;
     padding: 10px 70px;
