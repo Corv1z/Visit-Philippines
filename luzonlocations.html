@@ -6,6 +6,12 @@
 </head>
 <body>
 
+<div class="darkmode">
+    <input type="checkbox" id="icon"/>
+    <label for="icon"></label>
+</div>  
+
+<div class="header">      
     <div class="navbar">
         <div class="elements">
         <a href="index.html">Home</a>
@@ -13,13 +19,6 @@
         <a href="About.html">About</a>
         </div>
     </div>
-
-<div class="darkmode">
-    <input type="checkbox" id="icon"/>
-    <label for="icon"></label>
-</div>  
-
-    <div class="header"> 
             <h1 class="text1">Luzon</h1>
             <div class="btn">
             </div>
@@ -116,13 +115,10 @@
     </div>
 
     <script>
-
         var icon = document.getElementById("icon")
-
         icon.onclick=function(){
             document.body.classList.toggle("dark-theme")
         }
-
     </script>
 </body>
 </html>

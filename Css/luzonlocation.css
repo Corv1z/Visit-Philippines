@@ -10,30 +10,33 @@ body{
 .navbar a{
     color: white;
     text-shadow: 0 0 4px black;
-    margin: 30px;
+    margin: 0px 30px;
     text-decoration: none;
 }
 .navbar{
     display: flex;
     flex-direction: row;
     margin: 20px;
-    position: absolute;
+}
+
+#icon{
+    width: 30px;
+    margin-top: 6px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .darkmode{
     display: flex;
-    position: sticky;
     position: absolute;
-    top: 0;
-    margin-top: 10px;
     right: 0;
     justify-content: end;
     align-items: end;
 }
 
 label{
-    width: 100px;
-    height: 37px;
+    width: 66px;
+    height: 20px;
     position: relative;
     display: block;
     background:white;
@@ -49,9 +52,9 @@ label:after{
     width: 27px;
     height: 27px;
     position: absolute;
-    top: 5px;
-    left: 10px;
-    background: linear-gradient(180deg, #ffcc89,#d8860b);
+    top: -3px;
+    left: -1px;
+    background: linear-gradient(180deg, #353535,#261906);
     border-radius: 200px;
     box-shadow: 0px 0px 15px;
     transition: 0.3s;
@@ -68,22 +71,23 @@ input:checked + label{
 }
 
 input:checked + label:after{
-    left: 82px;
+    left: 62px;
     transform: translateX(-50%);
     background: linear-gradient(180deg, #777,#3a3a3a);
 }
-
 
 :root{
 
     --primary-color: #edf2fc;
     --secondary-color: #212121;
-    --gradient-color:linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)
+    --gradient-color:linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    
 }
 
 .dark-theme{
     --primary-color: #212121;
     --secondary-color: #fff;
+    --text-shadow:text-shadow 0 0 8px black;
     --gradient-color:Linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
 }
 
@@ -97,7 +101,7 @@ input:checked + label:after{
     font-size: 30px;
     color: var(--secondary-color);
     position: sticky;
-    text-shadow: 0 0 8px black;
+    text-shadow: var(--text-shadow);
     top: 0;
     border: 2px outset black;
     border-radius: 0px 16px 16px 0px;
@@ -115,6 +119,7 @@ input:checked + label:after{
     background-size: cover;
     display: flex;
     flex-direction: column;
+    border-radius: 0 0 30px 30px;
     justify-content: space-between;
     align-items: center;
 }
@@ -124,7 +129,7 @@ input:checked + label:after{
     font-size: 60px;
     color: white;
     text-shadow: 0 0 8px black;
-    margin: 340px 0px 4px 0px;
+    margin: 290px 0px 4px 0px;
 }
 
 .btn-txt{

@@ -40,6 +40,7 @@ body{
 .header{
     background-image: url(images/Socorro-Philippines-Sohoton-Cove-Bucas-Grande-Siargao-shutterstock_2076124846.jpg_9c9755fe0e.jpg);
     background-position: center;
+    border-radius: 0 0 30px 30px;
     background-size: cover;
     display: flex;
     flex-direction: column;

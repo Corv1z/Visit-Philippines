@@ -5,6 +5,12 @@
     <link rel="stylesheet" href="css/luzon.css">
 </head>
 <body>
+
+    <div class="darkmode">
+        <input type="checkbox" id="icon"/>
+        <label for="icon"></label>
+    </div>   
+    
     <div class="header">
         <div class="navbar">
             <a href="index.html">Home</a>
@@ -57,6 +63,12 @@
         </div>
         </a>
     </div>
-              
+           
+    <script>
+        var icon = document.getElementById("icon")
+        icon.onclick=function(){
+            document.body.classList.toggle("dark-theme")
+        }
+    </script>
 </body>
 </html>
