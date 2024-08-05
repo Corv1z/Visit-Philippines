@@ -3,8 +3,12 @@
 <head>
     <title>Welcome to Luzon</title>
     <link rel="stylesheet" href="css/luzon.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <audio id="sound1" src="Css/audio/pipes.mp3" preload="auto"></audio>
 
     <div class="darkmode">
         <input type="checkbox" id="icon"/>
@@ -64,11 +68,32 @@
         </a>
     </div>
            
+    <footer>
+        <div class="footer-container">
+            <div class="social-elements">
+                <a>
+                <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-linkedin"></i></button>
+                </a>
+                <a target="_blank" href="https://x.com/intent/user?screen_name=Corv1z">
+                <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-twitter"></i></button>
+                </a>
+                <a target="_blank" href="https://github.com/Corv1z">
+                <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-github"></i></button>
+                </a>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy;2024; Designed by <span class="designer">Corviz</span></p>
+        </div>
+    </footer>
+
     <script>
         var icon = document.getElementById("icon")
         icon.onclick=function(){
             document.body.classList.toggle("dark-theme")
         }
+        var audio = document.getElementById('sound1');
+        audio.volume = 0.1;
     </script>
 </body>
 </html>

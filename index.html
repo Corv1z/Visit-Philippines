@@ -8,6 +8,8 @@
 </head>
 <body>
 
+
+
     <audio id="sound1" src="Css/audio/pipes.mp3" preload="auto"></audio>
 
     <div class="darkmode">
@@ -24,7 +26,7 @@
             </div>
         </div>
             <h1 class="text1">Visit the Philippines</h1>
-        <div class="btn">
+            <div class="btn">
             <a target="_blank" href="https://www.philippineairlines.com/">
                 <button class="btn-txt">Book now</button>
             </a>
@@ -58,25 +60,25 @@
                     <p class="layoutdescription">Mindanao</p>
                 </div>
             </div>
-            </a>
+            </a>        
         </div>
 
+
         <footer>
-            <div class="footerContainer">
-                <div class="socialIcons">
-                    <a target="_blank" onclick="document.getElementById('sound1').play();"><i class="fa-brands fa-linkedin"></i></a>
-                    <a onclick="document.getElementById('sound1').play();" href="https://x.com/Corv1z" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a onclick="document.getElementById('sound1').play();" href="https://github.com/Corv1z" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <div class="footer-container">
+                <div class="social-elements">
+                    <a>
+                    <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-linkedin"></i></button>
+                    </a>
+                    <a target="_blank" href="https://x.com/intent/user?screen_name=Corv1z">
+                    <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-twitter"></i></button>
+                    </a>
+                    <a target="_blank" href="https://github.com/Corv1z">
+                    <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-github"></i></button>
+                    </a>
                 </div>
-                    <div class="footerNav">
-                        <ul>
-                            <li><a>Home</a></li>
-                            <li><a>Message Us</a></li>
-                            <li><a>Help</a></li>
-                        </ul>
-                    </div>
             </div>
-            <div class="footerbottom">
+            <div class="bottom-footer">
                 <p>Copyright &copy;2024; Designed by <span class="designer">Corviz</span></p>
             </div>
         </footer>
@@ -86,9 +88,8 @@
             icon.onclick=function(){
                 document.body.classList.toggle("dark-theme")
             }
-
             var audio = document.getElementById('sound1');
-            audio.volume = 100;
+            audio.volume = 0.1;
         </script>
 </body>
 </html>

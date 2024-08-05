@@ -3,8 +3,16 @@
 <head>
     <title>Welcome to Mindanao</title>
     <link rel='stylesheet' href="css/mindanao.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="darkmode">
+        <input type="checkbox" id="icon"/>
+        <label for="icon"></label>
+    </div> 
+
     <div class="header">
         <div class="navbar">
             <a href="index.html">Home</a>
@@ -38,5 +46,31 @@
         </div>
         </a>
     </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-elements">
+                <a>
+                <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-linkedin"></i></button>
+                </a>
+                <a target="_blank" href="https://x.com/intent/user?screen_name=Corv1z">
+                <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-twitter"></i></button>
+                </a>
+                <a target="_blank" href="https://github.com/Corv1z">
+                <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-github"></i></button>
+                </a>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy;2024; Designed by <span class="designer">Corviz</span></p>
+        </div>
+    </footer>
+
+    <script>
+        var icon = document.getElementById("icon")
+        icon.onclick=function(){
+            document.body.classList.toggle("dark-theme")
+        }
+    </script>
 </body>
 </html>
