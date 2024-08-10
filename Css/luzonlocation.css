@@ -4,19 +4,29 @@
 
 body{
     margin: 0;
+    transition: 0.15s;
     background-color: var(--primary-color);
 }
 
 .navbar a{
     color: white;
-    text-shadow: 0 0 4px black;
     margin: 0px 30px;
     text-decoration: none;
+    transition: 0.15s;   
+}
+
+.textelements:hover{
+    text-shadow: 0 0 5px lightblue;
+    cursor: pointer;
 }
 .navbar{
     display: flex;
+    z-index: 1000;
+    position: fixed;
     flex-direction: row;
-    margin: 20px;
+    background-color: rgb(17, 17, 17);
+    padding: 20px;
+    border-radius: 0px 0px 40% 40%;
 }
 
 #icon{
@@ -365,17 +375,14 @@ a{
         justify-content: start;
         border-radius: 6px;
     }
-    .navbar a{
-        color: white;
-        text-shadow: 0 0 4px black;
-        margin: 30px;
-    }
     .navbar{
         display: flex;
-        align-items: center;
-        justify-content: center;
+        z-index: 1000;
+        position: fixed;
         flex-direction: row;
-        margin-top: 20px;
+        background-color: rgb(17, 17, 17);
+        padding: 20px;
+        border-radius: 0px 0px 40% 40%;
     }
     .imgs-1,
     .imgs-2,
@@ -411,7 +418,7 @@ a{
     }
 
     .imagedescription{
-        color: black;
+        color: var(--secondary-color);
         font-size: 1.45em;
         padding: 20px;
     }
@@ -419,15 +426,17 @@ a{
         text-align: center;
         padding: 7px;
         display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: end;
+        align-items: end;
         margin-top: 50px;
         font-size: 30px;
+        color: var(--secondary-color);
         position: sticky;
+        text-shadow: var(--text-shadow);
         top: 0;
         border: 2px outset black;
         border-radius: 0px 16px 16px 0px;
-        background-color: #85FFBD;
-        background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); 
+        background-color: var(--gradient-color);
+        background-image: var(--gradient-color);
     }
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcome to Mindanao</title>
+    <title>VisitPH</title>
     <link rel='stylesheet' href="css/mindanao.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="Css/images/OkayChamp.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -15,9 +15,9 @@
 
     <div class="header">
         <div class="navbar">
-            <a href="index.html">Home</a>
-            <a>Message Us</a>
-            <a>About</a>
+            <a class="textelements" href="index.html">Home</a>
+            <a class="textelements">Message Us</a>
+            <a class="textelements" href="About.html">About</a>
         </div>
             <h1 class="text1">Mindanao</h1>
             <div class="btn">
@@ -50,14 +50,14 @@
     <footer>
         <div class="footer-container">
             <div class="social-elements">
-                <a>
-                <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-linkedin"></i></button>
+                <a target="_blank" href="">
+                <button class="social-buttons"><i class="fa-brands fa-linkedin"></i></button>
                 </a>
                 <a target="_blank" href="https://x.com/intent/user?screen_name=Corv1z">
-                <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-twitter"></i></button>
+                <button class="social-buttons"><i class="fa-brands fa-twitter"></i></button>
                 </a>
                 <a target="_blank" href="https://github.com/Corv1z">
-                <button onclick="document.getElementById('sound1').play();" class="social-buttons"><i class="fa-brands fa-github"></i></button>
+                <button class="social-buttons"><i class="fa-brands fa-github"></i></button>
                 </a>
             </div>
         </div>
@@ -66,19 +66,7 @@
         </div>
     </footer>
 
-    <script>
-        var icon = document.getElementById("icon");
-        var body = document.body;
-
-        if (localStorage.getItem("darkMode") === "true") {
-            body.classList.add("dark-theme");
-            icon.checked = true;
-        }
-
-        icon.onclick = function() {
-            body.classList.toggle("dark-theme");
-            localStorage.setItem("darkMode", body.classList.contains("dark-theme"));
-        };  
+    <script src="JS/mindanao.js">
     </script>
 </body>
 </html>
