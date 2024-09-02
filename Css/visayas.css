@@ -172,21 +172,21 @@ h1{
     color: white;
     top: 0;
     left: 0;
-    width: 460px;
+    width: 330px;
     height: 220px;
     background-color: rgba(red, green, blue, 0.5);
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 
 .layout{
     cursor: pointer;
-    width: 460px;
+    width: 330px;
     height: 220PX;
-    border-radius: 5px;
+    border-radius: 20px;
     object-fit: cover;
 }
 
@@ -247,7 +247,7 @@ a{
     font-size: 19px;
 }
 
-@media (max-width:1100px) {
+@media (max-width:1300px) {
     .header{
         background-image: url(images/chocolate-hills-PHIL0116-3a853dd3c6704d84bb5162bb37404279.jpg);
         background-repeat: no-repeat;
@@ -268,7 +268,7 @@ a{
         cursor: pointer;
         width: 320px;
         height: 220PX;
-        border-radius: 5px;
+        border-radius: 20px;
         object-fit: cover;
     }
     .layoutoverlay{
@@ -284,7 +284,7 @@ a{
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        border-radius: 6px;
+        border-radius: 20px;
     }
     .navbar a{
         color: white;
@@ -297,6 +297,10 @@ a{
         text-shadow: 0 0 5px lightblue;
     }
     
+    a{
+        margin-bottom: 55px;
+    }
+
     .navbar{
         display: flex;
         position: fixed;
@@ -329,7 +333,7 @@ a{
         cursor: pointer;
         width: 320px;
         height: 220PX;
-        border-radius: 5px;
+        border-radius: 20px;
         object-fit: cover;
     }
     .layoutoverlay{
@@ -345,7 +349,7 @@ a{
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        border-radius: 6px;
+        border-radius: 20px;
     }
     .navbar a{
         color: white;
@@ -376,5 +380,5 @@ a{
         justify-content: center;
         align-items: center;
         transition: 0.15s;
-    }    
+    }   
 }

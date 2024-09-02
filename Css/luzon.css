@@ -151,21 +151,21 @@ h1{
     color: white;
     top: 0;
     left: 0;
-    width: 320px;
+    width: 310px;
     height: 220px;
     background-color: rgba(red, green, blue, 0.5);
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: start;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 
 .layout{
     cursor: pointer;
-    width: 320px;
+    width: 310px;
     height: 220PX;
-    border-radius: 5px;
+    border-radius: 20px;
     object-fit: cover;
 }
 
@@ -326,7 +326,7 @@ a{
     font-size: 19px;
 }
 
-@media (max-width:1100px) {
+@media (max-width:1300px) {
     .header{
         background-image: url(images/cauayan-island-resort-X3IRiBqvSuY-unsplash.jpg);
         background-repeat: no-repeat;
@@ -345,14 +345,10 @@ a{
     }
     .layout{
         cursor: pointer;
-        width: 320px;
+        width: 330px;
         height: 220PX;
-        border-radius: 5px;
+        border-radius: 20px;
         object-fit: cover;
-    }
-    .layout:on{
-        width: 390px;
-        height: 220px;
     }
     .layoutoverlay{
         cursor: pointer;
@@ -360,14 +356,14 @@ a{
         color: white;
         top: 0;
         left: 0;
-        width: 320px;
+        width: 330px;
         height: 220px;
         background-color: rgba(red, green, blue, 0.5);
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        border-radius: 6px;
+        border-radius: 20px;
     }
     .navbar a{
         color: white;
@@ -441,6 +437,10 @@ a{
         background: #242424;
     }
     
+    a{
+        margin-bottom: 55px;
+    }
+
     input:checked + label:after{
         left: 62px;
         transform: translateX(-50%);
@@ -450,7 +450,7 @@ a{
 
 @media (max-width:570px) {
     .header{
-        background-image: url(images/philippines-1-1621524923.profileImage.2x-jpg.webp);
+        background-image: url(images/cauayan-island-resort-X3IRiBqvSuY-unsplash.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -469,7 +469,7 @@ a{
         cursor: pointer;
         width: 320px;
         height: 220PX;
-        border-radius: 5px;
+        border-radius: 20px;
         object-fit: cover;
     }
     .layoutoverlay{
@@ -485,7 +485,7 @@ a{
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        border-radius: 6px;
+        border-radius: 20px;
     }
     .navbar a{
         color: white;
