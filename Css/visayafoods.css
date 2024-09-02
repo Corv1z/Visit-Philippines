@@ -461,6 +461,16 @@ a{
         background-color: var(--gradient-color);
         background-image: var(--gradient-color);
     }
+    .darkmode{
+        display: flex;
+        z-index: 1000;
+        position: fixed;
+        top: 55px;
+        left: -10px;
+        justify-content: center;
+        align-items: center;
+        transition: 0.15s;
+    }  
 }
 
 @media (max-width:570px) {

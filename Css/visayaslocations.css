@@ -462,7 +462,35 @@ a{
         background-image: var(--gradient-color);
     }
 }
-
+@media (max-width:820px) {
+    .stickyheader{
+        text-align: center;
+        padding: 7px;
+        display: none;
+        justify-content: end;
+        align-items: end;
+        margin-top: 50px;
+        font-size: 30px;
+        color: var(--secondary-color);
+        position: sticky;
+        text-shadow: var(--text-shadow);
+        top: 0;
+        border: 2px outset black;
+        border-radius: 0px 16px 16px 0px;
+        background-color: var(--gradient-color);
+        background-image: var(--gradient-color);
+    }
+    .darkmode{
+        display: flex;
+        z-index: 1000;
+        position: fixed;
+        top: 55px;
+        left: -10px;
+        justify-content: center;
+        align-items: center;
+        transition: 0.15s;
+    }  
+}
 @media (max-width:550px) {
     .header{
         background-image: url(images/visayas/famouslocations/Apo\ Island\ 2.jpg);

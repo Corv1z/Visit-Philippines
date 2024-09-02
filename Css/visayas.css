@@ -30,7 +30,7 @@ body{
 }
 
 .header{
-    background-image: url(images/chocolate-hills-PHIL0116-3a853dd3c6704d84bb5162bb37404279.jpg);
+    background-image: url(images/visayasbg.jpeg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -249,7 +249,7 @@ a{
 
 @media (max-width:1300px) {
     .header{
-        background-image: url(images/chocolate-hills-PHIL0116-3a853dd3c6704d84bb5162bb37404279.jpg);
+        background-image: url(images/visayasbg.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -314,7 +314,7 @@ a{
 
 @media (max-width:570px) {
     .header{
-        background-image: url(images/chocolate-hills-PHIL0116-3a853dd3c6704d84bb5162bb37404279.jpg);
+        background-image: url(images/visayasbg.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
