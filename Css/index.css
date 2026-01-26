@@ -13,25 +13,51 @@ body{
     letter-spacing: 10px;
 }
 
-.navbar a{
-    color: white;
-    margin: 0px 30px;
-    text-decoration: none;
-    transition: 0.15s;   
+.navbar {
+    z-index: 100;
+    display: inline-flex;
+    position: fixed;
+    gap: 30px; 
+    align-items: center;
+    background: rgba(100, 100, 100, 0.308);
+    backdrop-filter: blur(3px);
+    padding: 14px 27px;
+    border-radius: 0 0 140px 140px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.textelements:hover{
-    text-shadow: 0 0 5px lightblue;
-    cursor: pointer;
+.navbar a {
+    text-decoration: none;
+    color: wheat;
+    margin: 0px 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    gap: 200px;
+    position: relative;
+    transition: all 0.3s ease;
 }
-.navbar{
-    display: flex;
-    z-index: 1000;
-    position: fixed;
-    flex-direction: row;
-    background-color: rgb(17, 17, 17);
-    padding: 20px;
-    border-radius: 0px 0px 40% 40%;
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background-color: var(--secondary-color);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%; 
+}
+
+.navbar a:hover {
+    opacity: 0.8; 
 }
 
 .text1{
@@ -49,7 +75,7 @@ body{
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     border-radius: 0 0 30px 30px;
     height: 440px;
@@ -62,18 +88,12 @@ body{
     cursor: pointer;
 }
 
-.elements{
-    justify-content: start;
-}
-
-.darkmode{
+.darkmode {
     display: flex;
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    right: 0;
-    justify-content: end;
-    align-items: end;
+    align-items: center;
+    margin-left: 10px;   
+    padding-left: 20px;   
+    border-left: 1px solid rgba(255, 255, 255, 0.3); 
 }
 
 label{
@@ -139,7 +159,12 @@ input:checked + label:after{
     font-size: 15px;
     padding: 10px 70px;
     box-shadow: inset 0 0 5px black;
-    margin: 20px 0; 
+    margin: 50px 0; 
+    transition: all 0.3s ease;
+}
+
+.btn-txt:hover{
+    transform: scale(1.1);
 }
 
 .box{
@@ -199,61 +224,61 @@ input:checked + label:after{
     object-fit: cover;
 }
 
-footer{
-    background: #111;
-    margin-top: 300px;
+.footer {
+    padding: 60px 20px;
+    background: #212121;
+    margin-top: 600px; /* Note: This is a very large margin. Ensure this is intentional. */
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: wheat;
+    font-family: 'Inter', sans-serif;
 }
 
-.footer-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.copyright p {
+    opacity: 1;
+    font-size: 20px;
+    margin: 10px 0;
 }
 
-i{
-    font-size: 30px;
+.copyright-name {
+    opacity: 0.8;
+    margin-left: 4px;
+    letter-spacing: 5px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 
-.social-buttons{
-   height: 50px;
-   margin: 20px;
-   width: 50px;
-   border-radius: 50px;
-   border: none; 
-   cursor: pointer;
-   transition: opacity 0.15s
+.social-buttons {
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #6462629a;
+    color: wheat;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 34px;
 }
 
-.social-buttons:hover{
-    opacity: 0.7;
+.social-buttons:hover {
+    opacity: 0.8;
+    transform: translateY(-3px); /* Adds a subtle lift effect */
+    background-color: #7a7878;
 }
 
-.fa-brands{
+.fa-brands {
     padding: 0;
     margin: 0;
-}
-
-.bottom-footer{
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bottom-footer p{
-    color: white;
-}
-
-.designer{
-    font-weight: 400;
-    letter-spacing: 7px;
-    margin-left: 7px;
-    font-size: 19px;
 }
 
 @media (max-width:1100px) {
@@ -295,25 +320,31 @@ a{
         justify-content: start;
         border-radius: 6px;
     }
-    .navbar a{
-        color: white;
-        margin: 0px 30px;
+    .navbar {
+    z-index: 100;
+    display: inline-flex;
+    position: fixed;
+    gap: 30px; 
+    align-items: center;
+    background: rgba(100, 100, 100, 0.308);
+    backdrop-filter: blur(3px);
+    padding: 14px 27px;
+    border-radius: 0 0 140px 140px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    }
+
+    .navbar a {
         text-decoration: none;
-        transition: 0.15s;   
-    }
-    
-    .textelements:hover{
-        text-shadow: 0 0 5px lightblue;
-    }
-    
-    .navbar{
-        display: flex;
-        position: fixed;
-        flex-direction: row;
-        background-color: rgb(17, 17, 17);
-        padding: 12px 7px 18px 7px;
-        z-index: 1000;
-        border-radius: 0px 0px 40% 40%;
+        color: wheat;
+        margin: 0px 30px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        gap: 200px;
+        position: relative;
+        transition: all 0.3s ease;
     }
 }
 
@@ -363,34 +394,40 @@ a{
         justify-content: start;
         border-radius: 6px;
     }
-    .navbar a{
-        color: white;
-        margin: 0px 15px;
-        text-decoration: none;
-        transition: 0.15s;   
+   .navbar {
+        position: fixed;
+        width: 100%;
+        max-width: 400px; 
+        justify-content: space-between; 
+        padding: 8px 15px; 
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 0 2px; 
+        gap: 0; 
+    }
+
+    .darkmode {
+        margin-left: 5px;
+        padding-left: 8px; 
+    }
+
+    .navbar .darkmode label {
+        width: 40px;  
+        height: 20px;
     }
     
-    .textelements:hover{
-        text-shadow: 0 0 5px lightblue;
+    .navbar .darkmode label:after {
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        left: 2px;
+        box-shadow: none; 
     }
-    
-    .navbar{
-        display: flex;
-        position: fixed;
-        flex-direction: row;
-        background-color: rgb(17, 17, 17);
-        padding: 12px 7px 18px 7px;
-        z-index: 1000;
-        border-radius: 0px 0px 40% 40%;
-    }
-    .darkmode{
-        display: flex;
-        z-index: 1000;
-        position: fixed;
-        top: 45px;
-        left: -10px;
-        justify-content: center;
-        align-items: center;
-        transition: 0.15s;
-    }    
+
+    .navbar .darkmode input:checked + label:after {
+        left: 100%;
+        transform: translateX(-100%) translateX(-2px);
+    } 
 }
